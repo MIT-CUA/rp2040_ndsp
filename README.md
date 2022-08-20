@@ -29,3 +29,31 @@ and you should see:
 ping =  Example NDSP is alive!
 add result =  18
 ```
+
+## Installation
+
+For a fresh new RP2040 module:
+
+1. Put the board into UFI bootloader mode, and copy <a href="adafruit/adafruit-circuitpython-raspberry_pi_pico-en_US-7.2.5.uf2">adafruit-circuitpython-raspberry_pi_pico-en_US-7.2.5.uf2<a> onto the RPI-RP2 drive.
+
+2. Wait for the board to reboot and for the CIRCUITPY drive to mount
+
+3. Copy <a href="adafruit/lib">adafruit/lib/*</a> to CIRCUITPY/lib/
+
+4. Copy <a href="rp2040_ndsp.py">rp2040_ndsp.py</a> to CIRCUITPY/code.py
+
+To modify the code, e.g. to change the board's IP address or to enable DHCP:
+
+1. Copy CIRCUITPY/code.py to a local file
+
+2. Edit the file
+
+3. Copy the file back to CIRCUITPY/code.py and wait for it to reboot (look for flashing LEDs)
+
+Debug by connecting to the serial port, following standard CircuitPython procedures.
+
+## Electronics
+
+Board schematic:
+
+<img src="images/RP2040-wiznet-board-schematic.png"></img>
